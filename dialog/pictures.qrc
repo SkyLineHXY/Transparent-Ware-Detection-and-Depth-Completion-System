@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="image">
+    <file>icon/图片1.png</file>
+    <file>icon/摄像头开.png</file>
+    <file>icon/下拉_白色.png</file>
+    <file>icon/文件title.png</file>
+    <file>icon/摄像头开.png</file>
+    <file>icon/打开.png</file>
+    <file>icon/关闭.png</file>
+    <file>icon/save.png</file>
+    <file>icon/还原.png</file>
+  </qresource>
+</RCC>
