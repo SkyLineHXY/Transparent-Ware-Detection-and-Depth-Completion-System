@@ -375,39 +375,7 @@ class My_transparent_Ui(QMainWindow,QT_source.Ui_MainWindow):
         self.DepthcamButton.setEnabled(False)
 
         # im_color = cv2.applyColorMap(cv2.convertScaleAbs(dpt, alpha=0.03), cv2.COLORMAP_JET)
-    # def camera_detect(self,img_original:np.array):
-    #     if img_original is None:
-    #         QMessageBox.information(self, "警告", "未输入图像信息！", QMessageBox.Ok)
-    #         return
-    #     img = self.data_transform(img_original)
-    #     img = torch.unsqueeze(img, dim=0)
-    #     predictions = self.model_RCNN(img.to(self.device))[0]
-    #     predict_boxes = predictions["boxes"].to("cpu").detach().numpy()
-    #     predict_classes = predictions["labels"].to("cpu").detach().numpy()
-    #     predict_scores = predictions["scores"].to("cpu").detach().numpy()
-    #     if len(predict_boxes) == 0:
-    #         print("没有检测到任何目标!")
-    #     from PIL import Image
-    #     img_plot_box = Image.fromarray(img_original)
-    #     plot_img,static_class_dic = draw_box_utils.draw_objs(img_plot_box,
-    #                                  predict_boxes,
-    #                                  predict_classes,
-    #                                  predict_scores,
-    #                                  category_index=category_index,
-    #                                  box_thresh=0.7,
-    #                                  line_thickness=3,
-    #                                  font_size=30)
-    #     QImage_plot_img=data_convert.PILToQImage(plot_img)
-    #     w = QImage_plot_img.width()
-    #     h = QImage_plot_img.height()
-    #     ratio = max(w / self.label_depth_in.width(), h / self.label_depth_in.height())
-    #     QImage_plot_img.setDevicePixelRatio(ratio)
-    #     self.label_rgb_out.setPixmap(QImage_plot_img)
-    #     self.label_rgb_out.setAlignment(Qt.AlignCenter)
-    #     self.label_rgb_out.setScaledContents(True)
-    #     for key,value in static_class_dic.items():
-    #         if(value!=0):
-    #             self.listWidget.addItem(key+":"+str(value))
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     mainWindow=My_transparent_Ui()
